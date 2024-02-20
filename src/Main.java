@@ -27,24 +27,23 @@ public class Main {
         }
 
         System.out.println( " Задача №1 ");
-        int clientOs = 1;
+        int clientOs = 0;
         if ( clientOs == 0){
             System.out.println( " установи версию ПО для IOS по ссылке");
         } else if ( clientOs == 1) {
             System.out.println( " установи верисю ПО для Android по ссылке");
         };
         System.out.println( " Задача 2 ");
-        int clientDeviceYear = 2016;
+        int clientDeviceYear = 2019;
         if ( clientDeviceYear < 2015 && clientOs == 0){
-            System.out.println( " Установите облегченную версию ПО IOS  по ссылке ");
+            System.out.println( " Установите облегченную версию ПО для IOS  по ссылке ");
         } else if ( clientDeviceYear >= 2015 && clientOs == 0) {
             System.out.println( " Позже вам все равно необходимо будет установить облегченную версию для IOS" );
-        }
-        if ( clientDeviceYear < 2015 && clientOs == 1){
+        } else if ( clientDeviceYear < 2015 && clientOs == 1){
             System.out.println( " Установи облегченную версию для Android по ссылке ");
         } else if ( clientDeviceYear >= 2015 && clientOs == 1) {
             System.out.println( " Позже вам все равно необходимо будет установить облегченную версию для Android ");
-        }else{
+        }else {
             System.out.println( " неверно задана ОС ");
         };
 
@@ -52,9 +51,7 @@ public class Main {
         int year = 2021;
         int a = year % 4;
         int c = year % 400;
-        if ( year < 1584){
-            System.out.println( " до 1584 года понятия высокосный год не существовало");
-        } else if ((year >= 1584 && a == 0) || (year >= 1584 && c == 0)) {
+        if (year >= 1584 && a == 0 || year >= 1584 && c == 0) {
             System.out.println( year + " год является высокосным ");
         }else {
             System.out.println( year + " год не является высокосным ");
