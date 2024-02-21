@@ -27,14 +27,16 @@ public class Main {
         }
 
         System.out.println( " Задача №1 ");
-        int clientOs = 0;
+        int clientOs = 1;
         if ( clientOs == 0){
             System.out.println( " установи версию ПО для IOS по ссылке");
         } else if ( clientOs == 1) {
-            System.out.println( " установи верисю ПО для Android по ссылке");
+            System.out.println(" установи верисю ПО для Android по ссылке");
+        }else if ( clientOs < 0 || clientOs >1 ){
+            System.out.println( " неврно выбрана ПО телефона ");
         };
         System.out.println( " Задача 2 ");
-        int clientDeviceYear = 2019;
+        int clientDeviceYear = 2016;
         if ( clientDeviceYear < 2015 && clientOs == 0){
             System.out.println( " Установите облегченную версию ПО для IOS  по ссылке ");
         } else if ( clientDeviceYear >= 2015 && clientOs == 0) {
@@ -43,15 +45,13 @@ public class Main {
             System.out.println( " Установи облегченную версию для Android по ссылке ");
         } else if ( clientDeviceYear >= 2015 && clientOs == 1) {
             System.out.println( " Позже вам все равно необходимо будет установить облегченную версию для Android ");
-        }else {
-            System.out.println( " неверно задана ОС ");
+        }else{
+            System.out.println( " неверно задана ПО ");
         };
 
         System.out.println(  " задача №3 ");
-        int year = 2021;
-        int a = year % 4;
-        int c = year % 400;
-        if (year >= 1584 && a == 0 || year >= 1584 && c == 0) {
+        int year = 2020;
+        if (year >= 1584 && year%400 == 0 && year %100 != 0 || year%4 == 0) {
             System.out.println( year + " год является высокосным ");
         }else {
             System.out.println( year + " год не является высокосным ");
